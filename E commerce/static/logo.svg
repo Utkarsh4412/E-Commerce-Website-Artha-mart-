@@ -1,0 +1,9 @@
+ <svg width="220" height="60" viewBox="0 0 220 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <text x="10" y="42" font-family="Inter, sans-serif" font-size="36" font-weight="bold" fill="#764ba2">Artha</text>
+  <text x="120" y="42" font-family="Inter, sans-serif" font-size="36" font-weight="bold" fill="#f5b700">Mart</text>
+  <text x="60" y="30" font-family="Inter, sans-serif" font-size="18" font-weight="bold" fill="#f5b700">₹</text>
+  <circle cx="200" cy="30" r="18" fill="#764ba2" />
+  <rect x="190" y="38" width="20" height="6" rx="3" fill="#f5b700"/>
+  <circle cx="195" cy="48" r="3" fill="#f5b700"/>
+  <circle cx="205" cy="48" r="3" fill="#f5b700"/>
+</svg>

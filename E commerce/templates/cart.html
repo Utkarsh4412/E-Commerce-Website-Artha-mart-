@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Cart{% endblock %}
+{% block content %}
+<h2>Your Cart</h2>
+{% if products %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for product in products %}
+        <tr>
+            <td>{{ product.name }}</td>
+            <td>${{ product.price }}</td>
+            <td>{{ product.quantity }}</td>
+            <td>${{ product.subtotal }}</td>
+            <td>
+                <form method="post" action="{{ url_for('remove_from_cart', product_id=product.id) }}">
+                    <button type="submit" class="btn btn-danger btn-sm">Remove</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<h4>Total: ${{ total }}</h4>
+<form method="post" action="{{ url_for('checkout') }}">
+    <button type="submit" class="btn btn-success">Checkout</button>
+</form>
+{% else %}
+<p>Your cart is empty.</p>
+{% endif %}
+{% endblock %} 
